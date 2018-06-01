@@ -22,7 +22,7 @@ pipenv sync --dev # ou sans --dev si installation en production
 ## Exécution
 
 ```sh
-pipenv run main.py token_de_compte_bot
+pipenv run python main.py token_de_compte_bot
 ```
 
 ## Tests
