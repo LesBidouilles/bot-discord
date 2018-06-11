@@ -1,3 +1,5 @@
+from os import environ as environment
+
 # The bot's prefix
 PREFIX = "*"
 
@@ -12,3 +14,13 @@ HELP_MESSAGE_INTRO = "Salut, le préfixe est `{}`. Voilà les commandes que je "
 
 # The footer of the help message
 HELP_MESSAGE_OUTRO = ""
+
+# env variables proxying
+# these are defined in the `.env` file which is described in the env file
+BOT_TOKEN = environment['BOT_TOKEN']
+DATABASE = {
+    'host': environment.get('DB_HOST', '127.0.0.1'),
+    'user': environment.get('DB_USER', 'postgres'),
+    'password': environment.get('DB_PASSWORD', ''),
+    'database': environment.get('DB_NAME', 'bot_discord')
+}

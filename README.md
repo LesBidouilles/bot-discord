@@ -6,8 +6,8 @@ Bot discord personnalisé pour le serveur [Bidouilleurs et Bidouilleuses]
 
 ## Installation
 
-**Il faut avoir [`git`][git], [`pipenv`][pipenv] et [`python3.6`][python]
-installés au préalable.**
+**Il faut avoir [`git`][git], [`pipenv`][pipenv], [`python3.6`][python] et
+[`PostgreSQL`][postgres] installés au préalable.**
 La procédure d'installation varie suivant les OS.
 
 ```sh
@@ -20,10 +20,18 @@ cd bot-discord
 pipenv sync --dev # ou sans --dev si installation en production
 ```
 
+Ensuite, copiez le fichier `env` vers `.env`
+```sh
+cp env .env
+```
+
+Et complétez les variables déclarées dans le fichier nouvellement créé à l'aide
+de votre éditeur de texte favori.
+
 ## Exécution
 
 ```sh
-pipenv run python main.py token_de_compte_bot
+pipenv run python main.py
 ```
 
 ## Tests
@@ -39,3 +47,4 @@ pipenv check
 [git]: https://git-scm.com
 [pipenv]: https://pypi.org/project/pipenv/
 [python]: https://www.python.org
+[postgres]: https://www.postgresql.org

@@ -5,6 +5,7 @@ name = "pypi"
 
 [packages]
 "discord.py" = "*"
+aiopg = "*"
 
 [dev-packages]
 "flake8" = "*"
