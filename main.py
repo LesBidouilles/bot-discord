@@ -1,4 +1,4 @@
-import sys
+import asyncio
 import discord
 import inspect
 
@@ -38,4 +38,19 @@ async def on_message(message):
                 await func(client, message)
 
 
-client.run(sys.argv[-1])
+async def init(loop):
+    await client.start(settings.BOT_TOKEN)
+
+
+async def exit(loop):
+    await client.logout()
+
+
+if __name__ == '__main__':
+    loop = asyncio.get_event_loop()
+    try:
+        loop.run_until_complete(init(loop))
+    except:
+        loop.run_until_complete(exit(loop))
+    finally:
+        loop.close()

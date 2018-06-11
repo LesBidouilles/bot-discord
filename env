@@ -1,0 +1,12 @@
+# copy this file to "./.env"
+# and then, make your modifications there.
+# DO NOT COMMIT THE .env file
+
+# token du compte bot
+BOT_TOKEN="your_bot_token"
+
+# informations de connection à la base de données
+DB_HOST="127.0.0.1"
+DB_USER="postgres"
+DB_PASSWORD=""
+DB_NAME="bot_discord"
